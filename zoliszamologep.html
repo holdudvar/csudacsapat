@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='hu'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zoltán úr számológépe ez</title>
+</head>
+
+<body>
+<br>
+<h1>Csudálatos számológép</h1>
+<br>
+<br>
+<form>
+    <label for='number1'>Egyik szám  </label>
+    <input id='number1' name='number1' type='text' placeholder='írj be egy számot'>
+    <br>
+    <br>
+    <label><strong>Gyorsan válassz műveletet</strong></label>
+    <select name='arithmeticOperator' class='arithmeticOperator'>
+        <option id='add' value='add'>Összeadás</option>
+        <option id='subtract' value='subtract'>Kivonás</option>
+        <option id='multiple' value='multiple'>Szorzás</option>
+        <option id='divide' value='divide'>Osztás</option>
+    </select>
+    <br>
+    <br>
+    <label for='number2'>Másik szám  </label>
+    <input id='number2' name='number2' type='text' placeholder='írj be még egy számot'>
+    <br>
+    <br>
+    <label><strong>A művelet eredménye szerintem: </strong></label>
+    <span id='result'></span>
+    <br>
+    <br>    
+    <input type=button onclick='zolicalculate()' value='Számol' style='width:180px; height:40px'>
+    <br>
+    <br>
+    <button type='reset' style='width:180px; height:25px'>Visszaállít</button>
+</form>
+<br>
+<script src='./JS/zoliszamologep.js'></script>
+</body>
+
+</html>
