@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Andris számológépe</title>
+</head>
+
+<body>
+  <div align="center">
+    <h1>Andris számológépe</h1>
+  </div>
+  <br><br><br><br><br><br>
+  <div>
+    <ul style="list-style-type:none">
+      <li>
+        <label for="firstNumber">Add meg az első számot!</label>
+        <input id="firstNumber" type="text" name="firstNumber" />
+      </li>
+      <br>
+      <li>
+        <label for="add">
+          <input type="button" id="add" onclick="calculateAdd()" value="+">
+        </label>
+        <label for="minus">
+          <input type="button" id="minus" onclick="calculateMinus()" value="-">
+        </label>
+        <label for="multiple">
+          <input type="button" id="multiple" onclick="calculateMultiple()" value="*">
+        </label>
+        <label for="divide">
+          <input type="button" id="divide" onclick="calculateDivide()" value="/">
+        </label>
+      </li>
+      <br>
+      <li>
+        <label for="secondNumber">Add meg a második számot!
+          <input id="secondNumber" type="text" name="secondNumber" />
+        </label>
+      </li>
+      <br>
+      <li>
+        <label>Eredmény:<span id="result"></span></label>
+
+      </li>
+    </ul>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div id="menubar">
+    <table style="width:100%">
+      <tr>
+        <td width="20%" id="main">
+          <div align="center">
+            <a href="index.html">Főoldal
+            </a>
+          </div>
+        </td>
+        <td width="20%" id="team">
+          <div align="center">
+            <a href="team.html">Csapat
+            </a>
+          </div>
+        </td>
+        <td width="20%" id="curriculum">
+          <div align="center">
+            <a href="curriculum.html">Tananyag
+            </a>
+          </div>
+        </td>
+        <td width="20%" id="contact">
+          <div align="center">
+            <a href="contact.html">Kapcsolat
+            </a>
+          </div>
+        </td>
+        <td width="20%" id="task">
+          <div align="center">
+            <a href="task.html">Feladatok
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="./js/andrisszamologep.js"></script>
+</body>
+
+</html>
