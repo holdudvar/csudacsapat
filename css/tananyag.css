@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0%;
+}
+
+.h1box {
+  background-color: rgba(12, 115, 184, 0.959);
+  width: auto;
+  height: auto;
+}
+
+.background {
+
+  background-color: rgb(50, 168, 216);
+  width: 100%;
+  padding-top: 5vh;
+  margin: 0%;
+}
+
+h1 {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: rgb(245, 101, 48);
+  margin-block-start: 0px;
+  /*em-- 1em=font-size*/
+  margin-block-end: 0px;
+  padding-block-start: 30px;
+  padding-block-end: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: azure;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: justify;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 5px rgb(8, 8, 26);
+}
+
+img {
+  display: block;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-style: outset;
+}
+
+a {
+  text-align: center;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 28px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-nav {
+  display: block;
+  align-content: center;
+  max-width: 15rem;
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+  color: rgb(241, 192, 37);
+  padding: .8rem 5rem;
+  border: 2px solid rgb(245, 100, 38);
+  border-radius: 1rem;
+}
+
+.button-nav:hover {
+  color: #fff;
+  background-color: rgb(241, 192, 37);
+  transition: background-color .15s ease-in-out;
+}
+
+.headline {
+  height: 1vh;
+  /*vh-böngészőablak százaléka*/
+  background-color: rgb(228, 162, 40);
+}

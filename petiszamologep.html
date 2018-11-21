@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Egyszerű számológép</h1>
+    <form>
+        <div>
+            Szám1: <input type="text" id="value1"><br><br>
+            Művelet:
+            <select id="operator">
+                <option value="add">öszeadás</option>
+                <option value="substract">kivonás</option>
+                <option value="divide">szorzás</option>
+                <option value="multiply">osztás</option>
+            </select><br><br>
+            Szám2: <input type="text" id="value2"><br><br>
+            <button type="button" onclick="petiszamologep()">Számolj!</button>
+        </div>
+    </form>
+    <span id="result"></span>
+    <script src="petiszamologep.js"></script>
+</body>
+
+</html>
