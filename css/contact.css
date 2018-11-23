@@ -1,0 +1,43 @@
+footer {
+  padding: 20px;
+  background-color: grey;
+}
+table {
+  width: 100%;
+  padding: 20px;
+  background-color: grey;
+}
+td {
+  width: 20%;
+}
+a {
+  padding: 10px;
+  background-color: black;
+  border-radius: 4px;
+  color: orange;
+}
+input {
+  width: 160px;
+  height:20px;
+  border-radius: 4px;
+}
+button[type='submit'] {
+  width: 160px;
+  height: 60px;
+  border-radius: 4px;
+}
+button[type='reset'] {
+  width: 160px;
+  border-radius: 4px;
+  padding: 5px;
+}
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  }
+  textarea {
+  width:480px;
+  height:160px;
+  border-radius: 4px;
+  }
