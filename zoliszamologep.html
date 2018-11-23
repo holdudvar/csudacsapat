@@ -1,47 +1,79 @@
 <!DOCTYPE html>
-<html lang='hu'>
+<html lang="hu">
 
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Zoltán úr számológépe ez</title>
+    <link rel="stylesheet" href="./css/zoliszamologep.css">
 </head>
-
 <body>
 <br>
-<h1>Csudálatos számológép</h1>
+<h1>Csudálatos számológép</h1>  
 <br>
 <br>
-<form>
-    <label for='number1'>Egyik szám  </label>
-    <input id='number1' name='number1' type='text' placeholder='írj be egy számot'>
+<div>
+    <br>
+    <table>
+        <thead>
+            <th><label for="number1">Egyik szám  </label></th>
+            <th><label for="arithmeticOperator">Válassz műveletet</label></th>
+            <th><label for="number2">Másik szám  </label></th>
+        </thead>
+        <tfoot class="calculatorBody">
+            <td colspan="3">
+                <span id="result"></span>
+            </td>
+        </tfoot>
+        <tbody>
+        <tr>
+            <td>
+                <input class="calculatorBody" id="number1" readonly>
+            </td>
+            <td><select id="arithmeticOperator" name="arithmeticOperator" class="arithmeticOperator calculatorBody">
+                    <option id="add" value="add">+</option>
+                    <option id="subtract" value="subtract">-</option>
+                    <option id="multiple" value="multiple">*</option>
+                    <option id="divide" value="divide">/</option>
+                    <option id="modulo" value="modulo">%</option>
+                    <option id="powerOf" value="powerOf">**</option>
+                </select>
+            </td>
+            <td>
+                <input class="calculatorBody" id="number2" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td><button class="calculatorBody" id="one" onclick="oneFunct()">1</button></td>
+            <td><button class="calculatorBody" id="two" onclick="twoFunct()">2</button></td>
+            <td><button class="calculatorBody" id="three" onclick="threeFunct()">3</button></td>
+        </tr>
+        <tr>
+            <td><button class="calculatorBody" id="four" onclick="fourFunct()">4</button></td>
+            <td><button class="calculatorBody" id="five" onclick="fiveFunct()">5</button></td>
+            <td><button class="calculatorBody" id="six" onclick="sixFunct()">6</button></td>
+        </tr>
+        <tr>
+            <td><button class="calculatorBody" id="seven" onclick="sevenFunct()">7</button></td>
+            <td><button class="calculatorBody" id="eight" onclick="eightFunct()">8</button></td>
+            <td><button class="calculatorBody" id="nine" onclick="nineFunct()">9</button></td>
+        </tr>
+        <tr>
+            <td><button class="calculatorBody" id="zero" onclick="zeroFunct()">0</button></td>
+            <td><button class="calculatorBody" id="decimalSeparator" onclick="decimalSeparatorFunct()">.</button></td>
+            <td><button class="calculatorBody" onclick="zolicalculate()">Számol</button></td>
+        </tr>
+       </tbody>
+    </table>
+</div>
     <br>
     <br>
-    <label><strong>Gyorsan válassz műveletet</strong></label>
-    <select name='arithmeticOperator' class='arithmeticOperator'>
-        <option id='add' value='add'>Összeadás</option>
-        <option id='subtract' value='subtract'>Kivonás</option>
-        <option id='multiple' value='multiple'>Szorzás</option>
-        <option id='divide' value='divide'>Osztás</option>
-    </select>
     <br>
     <br>
-    <label for='number2'>Másik szám  </label>
-    <input id='number2' name='number2' type='text' placeholder='írj be még egy számot'>
-    <br>
-    <br>
-    <label><strong>A művelet eredménye szerintem: </strong></label>
-    <span id='result'></span>
-    <br>
-    <br>    
-    <input type=button onclick='zolicalculate()' value='Számol' style='width:180px; height:40px'>
-    <br>
-    <br>
-    <button type='reset' style='width:180px; height:25px'>Visszaállít</button>
-</form>
+
 <br>
-<script src='./JS/zoliszamologep.js'></script>
+<script src="./js/zoliszamologep.js"></script>
 </body>
 
 </html>
