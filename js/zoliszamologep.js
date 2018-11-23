@@ -1,12 +1,13 @@
 var numberFieldSelectorLabel;
-var inputField = document.querySelector('#number1');
-inputField.addEventListener('focus', function () {
-numberFieldSelectorLabel = 'select1';
+
+var inputField1 = document.querySelector('#number1');
+inputField1.addEventListener('focus', function () {
+  numberFieldSelectorLabel = 'select1';
 })
 
-var inputField = document.querySelector('#number2');
-inputField.addEventListener('focus', function () {
-numberFieldSelectorLabel = 'select2';
+var inputField2 = document.querySelector('#number2');
+inputField2.addEventListener('focus', function () {
+  numberFieldSelectorLabel = 'select2';
 })
 
 function oneFunct() {
@@ -97,9 +98,9 @@ function decimalSeparatorFunct() {
   }
 }
 
-var floatNumber1 = parseFloat(document.querySelector('#number1').value);
-var floatNumber2 = parseFloat(document.querySelector('#number2').value);
 function zolicalculate() {
+  var floatNumber1 = parseFloat(document.querySelector('#number1').value);
+  var floatNumber2 = parseFloat(document.querySelector('#number2').value);
   var arithmeticOperator = document.querySelector('.arithmeticOperator').value;
   var result;
   if (arithmeticOperator === 'add') {
@@ -116,4 +117,9 @@ function zolicalculate() {
     result = floatNumber1 % floatNumber2;
   }
   document.querySelector('#result').innerHTML = `<strong> ${result}</strong>`;
+}
+function resetWindows() {
+  document.querySelector('#number1').value = '';
+  document.querySelector('#number2').value = '';
+  document.querySelector('#result').innerHTML = '';
 }
