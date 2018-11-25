@@ -1,3 +1,10 @@
+<!--
+  JS számológép módosítása
+  Számok beírása gombokkal, külön ablakba
+  Alapműveletek, + hatványozás + maradékos osztás
+  Eredmény visszaállításra
+-->
+
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -5,87 +12,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/andrisszamologep.css">
   <title>Andris számológépe</title>
 </head>
 
 <body>
-  <div align="center">
+  <div class="h1box">
     <h1>Andris számológépe</h1>
   </div>
-  <br><br><br><br><br><br>
-  <div>
-    <ul style="list-style-type:none">
-      <li>
-        <label for="firstNumber">Add meg az első számot!</label>
-        <input id="firstNumber" type="text" name="firstNumber" />
-      </li>
-      <br>
-      <li>
-        <label for="add">
-          <input type="button" id="add" onclick="calculateAdd()" value="+">
-        </label>
-        <label for="minus">
-          <input type="button" id="minus" onclick="calculateMinus()" value="-">
-        </label>
-        <label for="multiple">
-          <input type="button" id="multiple" onclick="calculateMultiple()" value="*">
-        </label>
-        <label for="divide">
-          <input type="button" id="divide" onclick="calculateDivide()" value="/">
-        </label>
-      </li>
-      <br>
-      <li>
-        <label for="secondNumber">Add meg a második számot!
-          <input id="secondNumber" type="text" name="secondNumber" />
-        </label>
-      </li>
-      <br>
-      <li>
-        <label>Eredmény:<span id="result"></span></label>
+  <div class="horizontline"></div>
+  <div class="contentbackground">
+    <div class="calculatorAnd">
+      <table id="calculatorAndinputLine">
+        <tr>
+          <td>
+            <label for="addFirstNumber" id="addFirstNumberLabel">
+              <input type="text" id="addFirstNumber" value="Első szám:" onfocus="activeInputFirstNumber()" readonly>
+              <br>
+              <!-- <div id="addFirstWrittenNumber"></div> -->
+            </label>
+          </td>
+          <td>
+            <label for="operationSelector" id="showOperation">
+              <input type="text" id="operationSelector" value="Művelet:" onfocus="activeInputOperation()" readonly>
+              <br>
+              <!-- <div id="showOperation"> </div> -->
+            </label>
+          </td>
+          <td>
+            <label for="addSecondNumber" id="addSecondNumberLabel">
+              <input type="text" id="addSecondNumber" value="Második szám" onfocus="activeInputSecondNumber()" readonly>
+              <br>
+              <!-- <div id="addSecondWrittenNumber"></div> -->
+            </label>
+          </td>
+          <td>
+            <label for="resultSelector">
+              <input type="button" id="resultSelector"  value="=" onclick="showResultNumber()">
+            </label>
+          </td>
+          <td>
+            <label for="showResult"><span id="resultSelectorLabel"></span></label>
+          </td>
+        </tr>
+      </table>
+      <table id="calculatorAndNumb">
+        <tr>
+          <td>
+            <label for="numberOneInput" id="numberOne"><input type="button" class="calculatorButton" id="numberOneInput"
+                value="1" onclick="calculateOne()" /></label>
+          </td>
+          <td>
+            <label for="numberTwoInput" id="numberTwo"><input type="button" class="calculatorButton" id="numberTwoInput"
+                value="2" onclick="calculateTwo()" /></label>
+          </td>
+          <td>
+            <label for="numberThreeInput" id="numberThree"><input type="button" class="calculatorButton" id="numberThreeInput"
+                value="3" onclick="calculateThree()" /></label>
+          </td>
+          <td>
+            <label for="operationAddNumber" id="operationAdd"><input type="button" class="calculatorButton" id="operationAddNumber"
+                value="+" onclick="operationAdd()" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="numberFourInput" id="numberFour"><input type="button" class="calculatorButton" id="numberFourInput"
+                value="4" onclick="calculateFour()" /></label>
+          </td>
+          <td>
+            <label for="numberFiveInput" id="numberFive"><input type="button" class="calculatorButton" id="numberFiveInput"
+                value="5" onclick="calculateFive()" /></label>
+          </td>
+          <td>
+            <label for="numberSixInput" id="numberSix"><input type="button" class="calculatorButton" id="numberSixInput"
+                value="6" onclick="calculateSix()" /></label>
+          </td>
+          <td>
+            <label for="operationMinusNumber" id="operationMinus"><input type="button" class="calculatorButton" id="operationMinusNumber"
+                value="-" onclick="operationMinus()" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="numberSevenInput" id="numberSeven"><input type="button" class="calculatorButton" id="numberSevenInput"
+                value="7" onclick="calculateSeven()" /></label>
+          </td>
+          <td>
+            <label for="numberEightInput" id="numberEight"><input type="button" class="calculatorButton" id="numberEightInput"
+                value="8" onclick="calculateEight()" /></label>
+          </td>
+          <td>
+            <label for="numberNineInput" id="numberNine"><input type="button" class="calculatorButton" id="numberNineInput"
+                value="9" onclick="calculateNine()" /></label>
+          </td>
+          <td>
+            <label for="operationMultiplyNumber" id="operationMultiply"><input type="button" class="calculatorButton"
+                id="operationMultiplyNumber" value="*" onclick="operationMultiply()" /></label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="numberZeroInput" id="numberZero"><input type="button" class="calculatorButton" id="numberZeroInput"
+                value="0" onclick="calculateZero()" /></label>
+          </td>
+          <td>
+            <label for="operationPointNumber" id="operationPoint"><input type="button" class="calculatorButton" id="operationPointNumber"
+                value="." onclick="calculatePoint()" /></label>
+          </td>
+          <td>
+            <label for="operationExponentNumber" id="operationExponent"><input type="button" class="calculatorButton"
+                id="operationExponentNumber" value="^" onclick="operartionExponent()" /></label>
+          </td>
+          <td>
+            <label for="operationDivideNumber" id="operationDivide"><input type="button" class="calculatorButton" id="operationDivideNumber"
+                value="/" onclick="operationDivide()" /></label>
+          </td>
+          <td>
+            <label for="operationModuloNumber" id="operationModulo"><input type="button" class="calculatorButton" id="operationModuloNumber"
+                value="%" onclick="operationModulo()" /></label>
+          </td>
+        </tr>        
+      </table>
+    </div>
+  </div >    
 
-      </li>
-    </ul>
-  </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <div id="menubar">
-    <table style="width:100%">
-      <tr>
-        <td width="20%" id="main">
-          <div align="center">
-            <a href="index.html">Főoldal
-            </a>
-          </div>
-        </td>
-        <td width="20%" id="team">
-          <div align="center">
-            <a href="team.html">Csapat
-            </a>
-          </div>
-        </td>
-        <td width="20%" id="curriculum">
-          <div align="center">
-            <a href="curriculum.html">Tananyag
-            </a>
-          </div>
-        </td>
-        <td width="20%" id="contact">
-          <div align="center">
-            <a href="contact.html">Kapcsolat
-            </a>
-          </div>
-        </td>
-        <td width="20%" id="task">
-          <div align="center">
-            <a href="task.html">Feladatok
-            </a>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
 
-  <script src="./js/andrisszamologep.js"></script>
+    <script src="./js/andrisszamologep.js"></script>
 </body>
 
 </html>
