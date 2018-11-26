@@ -1,0 +1,60 @@
+h1
+{
+    text-align: center;
+}
+
+#calculator
+{
+    width: 250px;
+    height: 350px;
+    border: 1px solid black;
+    text-align: center;
+    background: lightgrey;
+    margin: 150px auto;
+    box-shadow: 0px 0px 30px black;
+}
+
+#display
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 30px;
+    border: 5px  black;
+    box-shadow: 0px 0px 30px black;
+    text-align: right;
+    font: 20px bold;
+    color: black;
+}
+
+#keys
+{
+    width: 41px;
+    height: 35px;
+    margin-left: 10px;
+    margin-bottom:20px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;   
+}
+
+#keys:hover
+{
+    background: grey;
+    font-weight: bold;
+}
+
+#equal
+{
+    width: 41px;
+    height: 35px;
+    margin-left: 10px;
+    margin-bottom:20px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;     
+}
+
+#equal:hover
+{
+    background: grey;
+    font-weight: bold;
+}

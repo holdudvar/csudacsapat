@@ -1,7 +1,34 @@
-function plusz() {document.szamologep.eredmeny.value = document.szamologep.egy.value * 1 + document.szamologep.ketto.value * 1}
 
-function minusz() {document.szamologep.eredmeny.value = document.szamologep.egy.value - document.szamologep.ketto.value}
+var box = document.getElementById('display');
 
-function szor() {document.szamologep.eredmeny.value = document.szamologep.egy.value * document.szamologep.ketto.value}
+function addtoscreen(x)
+{
+    box.value += x;
+    if(x=='c')
+    {
+        box.value='';
+    }
 
-function oszt() {document.szamologep.eredmeny.value = document.szamologep.egy.value / document.szamologep.ketto.value}
+}
+
+function answer()
+{
+    x=box.value;
+    x=eval(x);
+    box.value=x;
+}
+
+function power(y)
+{
+    x=box.value;
+    x=Math.pow(x,y);
+    box.value=x;    
+}
+
+function modulus()
+{
+    x=box.value;
+    var a = a; var b = b; var c = a % b;
+    x=c;
+    box.value=x;
+}
