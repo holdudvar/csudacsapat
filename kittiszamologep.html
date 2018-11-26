@@ -2,27 +2,50 @@
 <html lang="hu">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Kitti számológép</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/kitti szamologep.css">
+   <title>Kitti calculator</title>
 </head>
 
 <body>
-  <form name="szamologep">
     <h1>Kitti számológépe</h1>
-    <input name="egy">
-    <br><br>
-    <input type="button" value="+" onclick="plusz()">
-    <input type="button" value="-" onclick="minusz()">
-    <input type="button" value="*" onclick="szor()">
-    <input type="button" value="/" onclick="oszt()">
-    <br><br>
-    <input name="ketto">
-    <br><br>
-    Eredmény: <input name="eredmeny">
-  </form>
-  <script src="./js/kittiszamologep.js"></script>
+    <div id="calculator">
+        <form>
+            <input type="text" id="display"><br>
+
+            <input type="button" value="7" id="keys" onclick="addtoscreen('7')">
+            <input type="button" value="8" id="keys" onclick="addtoscreen('8')">
+            <input type="button" value="9" id="keys" onclick="addtoscreen('9')">
+            <input type="button" value="*" id="keys" onclick="addtoscreen('*')"><br>
+
+            <input type="button" value="4" id="keys" onclick="addtoscreen('4')">
+            <input type="button" value="5" id="keys" onclick="addtoscreen('5')">
+            <input type="button" value="6" id="keys" onclick="addtoscreen('6')">
+            <input type="button" value="/" id="keys" onclick="addtoscreen('/')"><br>
+
+            <input type="button" value="1" id="keys" onclick="addtoscreen('1')">
+            <input type="button" value="2" id="keys" onclick="addtoscreen('2')">
+            <input type="button" value="3" id="keys" onclick="addtoscreen('3')">
+            <input type="button" value="-" id="keys" onclick="addtoscreen('-')"><br>
+
+            <input type="button" value="." id="keys" onclick="addtoscreen('.')">
+            <input type="button" value="0" id="keys" onclick="addtoscreen('0')">
+            <input type="button" value="," id="keys" onclick="addtoscreen(',')">
+            <input type="button" value="+" id="keys" onclick="addtoscreen('+')"><br>
+
+            <input type="button" value="c" id="keys" onclick="addtoscreen('c')">
+            <input type="button" value="=" id="equal" onclick="answer()">
+            <input type="button" value="%" id="keys" onclick="modulus()">
+            <input type="button" value="**" id="keys" onclick="power(2)"><br>
+
+
+
+        </form>
+    </div>
+    <script src="js/kittiszamologep.js"></script>
+    </script>
 </body>
 
 </html>
