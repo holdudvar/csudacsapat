@@ -9,10 +9,10 @@
 </head>
 
 <body>
-    <h1>Egyszerű számológép</h1>
+    <h1>Továbbfejlesztett számológép</h1>
     <form>
         <div>
-            Szám1: <input type="text" id="value1"><br><br>
+            Szám1: <p id="value1">bevitel1</p><br><br>
             Művelet:
             <select id="operator">
                 <option value="add">öszeadás</option>
@@ -21,11 +21,26 @@
                 <option value="multiply">osztás</option>
             </select><br><br>
             Szám2: <input type="text" id="value2"><br><br>
+
+            <button type="button" onclick="add7()">7</button>
+            <button type="button" onclick="add8()">8</button>
+            <button type="button" onclick="add9()">9</button><br>
+            <button type="button" onclick="add8()">4</button>
+            <button type="button" onclick="add7()">5</button>
+            <button type="button" onclick="add6()">6</button><br>
+            <button type="button" onclick="add1()">1</button>
+            <button type="button" onclick="add2()">2</button>
+            <button type="button" onclick="add3()">3</button><br>
+            <button type="button" onclick="addNull()">0</button>
+            <button type="button" onclick="addDot()">.</button>
+            <button>CE</button>
+
+
             <button type="button" onclick="petiszamologep()">Számolj!</button>
         </div>
     </form>
     <span id="result"></span>
-    <script src="petiszamologep.js"></script>
+    <script src="/js/petiszamologep2.js"></script>
 </body>
 
 </html>

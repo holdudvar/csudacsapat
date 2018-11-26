@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator 2.0</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+    <tr>
+      <td class="heading">Peti számológépe</td>
+    </tr>
+    <td>
+      <input type="text" id="input1" placeholder="0" readonly="readonly">
+      <select id="operator">
+        <option value="" selected></option>
+        <option value="add">öszeadás</option>
+        <option value="substract">kivonás</option>
+        <option value="divide">szorzás</option>
+        <option value="multiply">osztás</option>
+        <option value="percent">százalék</option>
+        <option value="involve">hatványozás</option>
+
+      </select>
+      <input type="text" id="input2" placeholder="0" readonly="readonly" style="color: green;">
+    </td>
+    </tr>
+    <!--buttons-->
+    <tr>
+      <td>
+        <input type="button" value="1" onclick="getNumber(1)">
+        <input type="button" value="2" onclick="getNumber(2)">
+        <input type="button" value="3" onclick="getNumber(3)">
+        <br>
+        <input type="button" value="4" onclick="getNumber(4)">
+        <input type="button" value="5" onclick="getNumber(5)">
+        <input type="button" value="6" onclick="getNumber(6)">
+        <br>
+        <input type="button" value="7" onclick="getNumber(7)">
+        <input type="button" value="8" onclick="getNumber(8)">
+        <input type="button" value="9" onclick="getNumber(9)">
+        <br>
+        <input type="button" value="0" onclick="getNumber(0)">
+        <input type="button" value="," onclick="getFractional()">
+        <input type="button" value="=" onclick="getResult()">
+        <br>
+        <input type="text" id="result" readonly="readonly">
+      </td>
+    </tr>
+
+  </table>
+  <script src="/js/petiszamologep3.js"></script>
+</body>
+
+</html>
